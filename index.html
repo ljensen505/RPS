@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R | P | S</title>
+</head>
+<body>
+    
+    <script>
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        // create function where computer makes random selection
+        function computerPlay() {
+            // generate random number 1, 2, or 3
+            let num = Math.round(getRandomArbitrary(1, 3));
+            // convert number to R, P, or S
+            if (num === 1) {
+                return "ROCK";
+            } else if (num === 2) {
+                return "PAPER";
+            } else {
+                return "SCISSORS";
+            }
+        }
+
+        function gameLogic(playerSelection, computerSelection) {
+            // compare to computer
+            let player = playerSelection.toUpperCase();
+            let victory = "You Win!";
+            let defeat = "You Lose!"
+            // console.log(player);
+            // console.log(computerSelection);
+            if (player === computerSelection) {
+                return "It's a tie!";
+            } else if (player === "ROCK" && computerSelection === "PAPER") {
+                return defeat;
+            } else if (player === "ROCK" && computerSelection === "SCISSORS") {
+                return victory;
+            } else if (player === "PAPER" && computerSelection === "SCISSORS") {
+                return defeat;
+            } else if (player === "PAPER" && computerSelection === "ROCK") {
+                return victory;
+            } else if (player === "SCISSORS" && computerSelection === "ROCK") {
+                return victory;
+            } else if (player === "SCISSORS" && computerSelection === "PAPER") {
+                return defeat;
+            } else {
+                return "Something went wrong";
+            }
+            //print outcome message
+
+        }
+        
+        // play the game, get input from player
+        console.log(gameLogic(prompt("This is Rock Paper Scissors! Make a selection:"), computerPlay()));
+    </script>
+
+</body>
+</html>
