@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Itim, sans-serif;
+}
+
+body {
+  background-color: #6c4b5e;
+}
+
+header {
+  background: #DDFFD9;
+  color: #6c4b5e;
+  text-align: center;
+  font-family: Itim, sans-serif;
+  padding: 20px;
+}
+
+.scoreboard {
+  border: 3px solid #ECC8AE;
+  border-radius: 50px;
+  width: 200px;
+  margin: 20px auto;
+  color: #DDFFD9;
+  font-size: 46px;
+  text-align: center;
+  font-family: Itim, sans-serif;
+  padding: 15px 20px;
+  box-shadow: 0px 3px 13px 3px rgba(179,103,155,0.74);
+  position: relative;
+}
+
+.badge {
+  background-color: #D7907B;
+  font-size: 14px;
+  padding: 2px 10px; 
+}
+
+#user-label {
+  position: absolute;
+  top: 30px;
+  left: -25px;
+}
+
+#comp-label {
+  position: absolute;
+  top: 30px;
+  right: -25px;
+}
+
+.result {
+  font-size: 40px;
+  color: #DDFFD9;
+  text-align: center;
+  font-weight: bold;
+}
+
+.choices {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.choice {
+  font-size: 60px;
+  color: #ECC8AE;
+  display: inline-block;
+  border: 4px solid #DDFFD9;
+  border-radius: 50%;
+  padding: 15px 1.5rem;
+  margin: 0 20px;
+  transition: all 0.2s ease;
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: #B3679B;
+  transform: scale(1.1);
+}
+
+#action-message {
+  text-align: center;
+  color: #DDFFD9;
+  font-family: Itim, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* color pallette https://coolors.co/ddffd9-ecc8ae-d7907b-6c4b5e-b3679b */
