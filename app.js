@@ -48,7 +48,7 @@ function lose(user, computer) {
     reset();
   } else {
     computerScore_span.textContent = computerScore;
-  result_p.innerHTML = `${convertToWord(computer)} beats ${convertToWord(user)}. You win!`;
+  result_p.innerHTML = `${convertToWord(computer)} beats ${convertToWord(user)}. You lose :(`;
   }
 }
 
@@ -93,8 +93,3 @@ function main() {
 }
 
 main();
-
-var port = process.env.PORT || 3000;
-app.listen(port, function () {
-    console.log("Server Has Started!");
-});
