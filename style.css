@@ -21,7 +21,7 @@ header {
   border: 3px solid #ECC8AE;
   border-radius: 50px;
   width: 200px;
-  margin: 20px auto;
+  margin: 40px auto;
   color: #DDFFD9;
   font-size: 46px;
   text-align: center;
@@ -89,6 +89,14 @@ header {
   font-weight: bold;
   font-size: 20px;
   margin-top: 20px;
+}
+
+.lose-glow {
+  text-shadow: 0px 0px 23px 5px rgba(255,0,0,1);
+}
+
+.win-glow {
+  text-shadow: 0px 0px 23px 5px rgb(44, 255, 44);
 }
 
 /* color pallette https://coolors.co/ddffd9-ecc8ae-d7907b-6c4b5e-b3679b */

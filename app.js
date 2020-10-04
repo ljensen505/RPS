@@ -23,16 +23,33 @@ function convertToWord(letter) {
   }
 }
 
+function reset() {
+  userScore = 0;
+  computerScore = 0;
+  userScore_span.textContent = userScore;
+  computerScore_span.textContent = computerScore;
+}
+
 function win(user, computer) {
   userScore++;
-  userScore_span.textContent = userScore;
+  if (userScore >= 5) {
+    result_p.innerHTML = 'Congratulations! You won the round!';
+    reset();
+  } else {
+    userScore_span.textContent = userScore;
   result_p.innerHTML = `${convertToWord(user)} beats ${convertToWord(computer)}. You win!`;
+  }
 }
 
 function lose(user, computer) {
   computerScore++;
-  computerScore_span.textContent = computerScore;
-  result_p.innerHTML = `${convertToWord(computer)} beats ${convertToWord(user)}. You lose!`;
+  if (computerScore >= 5) {
+    result_p.innerHTML = 'You lost this round. Try again!';
+    reset();
+  } else {
+    computerScore_span.textContent = computerScore;
+  result_p.innerHTML = `${convertToWord(computer)} beats ${convertToWord(user)}. You win!`;
+  }
 }
 
 function draw() {
